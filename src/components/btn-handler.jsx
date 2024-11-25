@@ -31,8 +31,8 @@ const ButtonHandler = ({ imageRef, cameraRef, videoRef }) => {
 
   return (
     <div className="btn-container">
-      {/* Image Handler */}
-      <input
+     
+     <input
         type="file"
         accept="image/*"
         style={{ display: "none" }}
@@ -54,9 +54,9 @@ const ButtonHandler = ({ imageRef, cameraRef, videoRef }) => {
         }}
       >
         {streaming === "image" ? "Close" : "Open"} Image
+    
       </button>
-
-      {/* Video Handler */}
+      {/*
       <input
         type="file"
         accept="video/*"
@@ -82,8 +82,9 @@ const ButtonHandler = ({ imageRef, cameraRef, videoRef }) => {
       >
         {streaming === "video" ? "Close" : "Open"} Video
       </button>
-
-      {/* Webcam Handler */}
+      */}
+      
+     {/*  Webcam Handler */}
       <button
         onClick={() => {
           // if not streaming

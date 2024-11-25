@@ -20,7 +20,7 @@ const App = () => {
   const canvasRef = useRef(null);
 
   // model configs
-  const modelName = "yolov8n";
+  const modelName = "new";
 
   useEffect(() => {
     tf.ready().then(async () => {
@@ -36,7 +36,7 @@ const App = () => {
       // warming up model
       const dummyInput = tf.ones(yolov8.inputs[0].shape);
       const warmupResults = yolov8.execute(dummyInput);
-
+      console.log(warmupResults)
       setLoading({ loading: false, progress: 1 });
       setModel({
         net: yolov8,
@@ -51,13 +51,11 @@ const App = () => {
     <div className="App">
       {loading.loading && <Loader>Loading model... {(loading.progress * 100).toFixed(2)}%</Loader>}
       <div className="header">
-        <h1>📷 YOLOv8 Live Detection App</h1>
+        <h1>📷 AI Automated Security and Surveillance System</h1>
         <p>
-          YOLOv8 live detection application on browser powered by <code>tensorflow.js</code>
+          Detect harmful objects in your vicinity
         </p>
-        <p>
-          Serving : <code className="code">{modelName}</code>
-        </p>
+        
       </div>
 
       <div className="content">
